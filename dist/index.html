@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+    <title>Udico</title>
+</head>
+<body>
+
+    <div class="container shadow p-3 m-5 bg-body rounded">
+        <h3 class="text-primary">Bienvenido a Udico Usuario1</h3>
+        <h1 class="my-5"><i class="bi bi-cash-coin"></i>Saldo: <div id="saldo1"></div></h1>
+        <div class="btn-group">
+            <button type="button" class="btn btn-outline-success" onclick="enviar(1,2)">
+                <i class="bi bi-arrow-left-right"></i>
+                Transferir
+            </button>
+            <button type="button" class="btn btn-outline-success">
+                <i class="bi bi-wallet2"></i>
+                Pagar
+            </button>
+            <button type="button" class="btn btn-outline-success">
+                <i class="bi bi-arrow-right-square"></i>
+                Prestar
+            </button>
+        </div>
+        <button type="button" class="btn btn-outline-primary">
+            <i class="bi bi-arrow-left-square"></i>
+            Solicitar Prestamo
+        </button>
+    </div>
+
+    <div class="container shadow p-3 m-5 bg-body rounded">
+        <h3 class="text-primary">Bienvenido a Udico Usuario2</h3>
+        <h1 class="my-5"><i class="bi bi-cash-coin"></i>Saldo: <div id="saldo2"></div></h1>
+        <div class="btn-group">
+            <button type="button" class="btn btn-outline-success" onclick="enviar(2,1)">
+                <i class="bi bi-arrow-left-right"></i>
+                Transferir
+            </button>
+            <button type="button" class="btn btn-outline-success">
+                <i class="bi bi-wallet2"></i>
+                Pagar
+            </button>
+            <button type="button" class="btn btn-outline-success">
+                <i class="bi bi-arrow-right-square"></i>
+                Prestar
+            </button>
+        </div>
+        <button type="button" class="btn btn-outline-primary">
+            <i class="bi bi-arrow-left-square"></i>
+            Solicitar Prestamo
+        </button>
+    </div>
+
+    <button class="btn btn-primary m-5" onclick="depositar(1)">Depositar</button>
+    
+
+    <!-- Scripts -->
+    <script src="./main.js"></script>
+</body>
+</html>
