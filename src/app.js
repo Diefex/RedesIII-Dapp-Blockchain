@@ -71,20 +71,16 @@ window.autenticar = async () => {
                     <i class="bi bi-arrow-left-right"></i>
                     Transferir
                 </button>
-                <button type="button" class="btn btn-outline-success">
+                <button type="button" class="btn btn-outline-success"  data-bs-toggle="modal" data-bs-target="#payModal">>
                     <i class="bi bi-wallet2"></i>
                     Pagar
                 </button>
-                <button type="button" class="btn btn-outline-success">
-                    <i class="bi bi-arrow-right-square"></i>
-                    Prestar
-                </button>
             </div>
-            <button type="button" class="btn btn-outline-primary">
-                <i class="bi bi-arrow-left-square"></i>
-                Solicitar Prestamo
-            </button>
         </div>
+
+
+
+
 
         <!-- Modal -->
         <div class="modal fade" id="transferModal" tabindex="-1" aria-labelledby="transferModalLabel" aria-hidden="true">
@@ -114,10 +110,61 @@ window.autenticar = async () => {
         </div>
         </div>
 
+
+
+        <div class="modal fade" id="payModal" tabindex="-1" aria-labelledby="transferModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="transferModalLabel">Pago derechos pecuniarios</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                 Pagar certificado de notas $15.100
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <label class="form-check-label" for="flexRadioDefault2">
+                Pagar constancia de estudio $7.600
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" checked>
+                <label class="form-check-label" for="flexRadioDefault3">
+                  Duplicado de carné $30.300
+                </label>
+              </div>
+              <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" checked>
+              <label class="form-check-label" for="flexRadioDefault4">
+                Cursos vacacionales $90.900
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault5" checked>
+              <label class="form-check-label" for="flexRadioDefault5">
+                 Multa de biblioteca $3.000
+              </label>
+            </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-primary" onclick="enviar()">Enviar</button>
+            </div>
+            </div>
+        </div>
+        </div>
+
+
         <button class="btn btn-primary m-5" onclick="depositar('`+usuario+`')">Depositar</button>
         `;
         return true;
     }
     
 }
-  
